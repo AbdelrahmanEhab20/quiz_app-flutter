@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int scoreResult;
-  final Function resatrtQuiz;
-  Result(this.scoreResult, this.resatrtQuiz);
+  final Function restartQuiz;
+  Result(this.scoreResult, this.restartQuiz);
 
   String get resultPhrase {
     String resultText;
@@ -23,6 +23,7 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(resultPhrase,
             textAlign: TextAlign.center,
@@ -36,7 +37,7 @@ class Result extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                   fontSize: 22)),
-          onPressed: resatrtQuiz,
+          onPressed: restartQuiz,
           style: OutlinedButton.styleFrom(
               primary: Colors.black, side: BorderSide()),
         )
