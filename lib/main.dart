@@ -64,7 +64,7 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
-    print(_questionIndex);
+    // print(_questionIndex);
   }
 
   @override
@@ -74,10 +74,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            /* leading takes in a widget and can
+          /* leading takes in a widget and can
            be assigned anything — text, an icon, 
            or even multiple widgets within a row.*/
+          appBar: AppBar(
             leading: Icon(Icons.account_circle_sharp),
             leadingWidth: 100,
             title: Text(
