@@ -8,13 +8,13 @@ class Result extends StatelessWidget {
   String get resultPhrase {
     String resultText;
     if (scoreResult >= 8) {
-      resultText = 'You Did It , Great Job!';
+      resultText = 'Your Score =${scoreResult}  \nYou Did It , Great Job !';
     } else if (scoreResult <= 10) {
-      resultText = 'You Did It , nice Job! ';
+      resultText = 'Your Score =${scoreResult} \n You Did It, Nice Job ! ';
     } else if (scoreResult <= 12) {
-      resultText = 'You Did It , good Job! ';
+      resultText = 'Your Score =${scoreResult}  \nYou Did It , Good Job ! ';
     } else {
-      resultText = 'Bad Job -_- ';
+      resultText = 'Your Score =${scoreResult} \n Bad Job -_- ';
     }
     return resultText;
   }
@@ -31,15 +31,20 @@ class Result extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
                 fontSize: 36)),
-        OutlinedButton(
-          child: Text("Restart Quiz !!",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 22)),
-          onPressed: restartQuiz,
-          style: OutlinedButton.styleFrom(
-              primary: Colors.black, side: BorderSide()),
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 15),
+          child: OutlinedButton(
+            child: Text("Restart Quiz !!",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 26)),
+            onPressed: restartQuiz,
+            style: OutlinedButton.styleFrom(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                primary: Colors.black,
+                side: BorderSide()),
+          ),
         )
       ],
     ));

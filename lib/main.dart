@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   final _questions = const [
     //Making a map
     {
-      'questionText': 'What\'s you favorite color?',
+      'questionText': 'What\'s you favorite color ?',
       'answers': [
         {'text': 'Black', 'score': 3},
         {'text': 'Red', 'score': 2},
@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal',
+      'questionText': 'What\'s your favorite animal ?',
       'answers': [
         {'text': 'Rabbit', 'score': 3},
         {'text': 'Snake', 'score': 2},
@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
       ],
     },
     {
-      'questionText': 'Who\'s your favorite team',
+      'questionText': 'Who\'s your favorite team ?',
       'answers': [
         {'text': 'Al Ahly', 'score': 10},
         {'text': 'Liverpool', 'score': 1},
@@ -72,16 +72,20 @@ class _MyAppState extends State<MyApp> {
   //represented by this widget.
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
             /* leading takes in a widget and can
            be assigned anything — text, an icon, 
            or even multiple widgets within a row.*/
-            leading: Icon(Icons.account_circle_rounded),
+            leading: Icon(Icons.account_circle_sharp),
             leadingWidth: 100,
-            title: Text("Quiz App"),
+            title: Text(
+              "Quiz App",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             centerTitle: true,
-            backgroundColor: Colors.blueGrey[700],
+            backgroundColor: Color.fromARGB(255, 46, 85, 152),
           ),
           body: _questionIndex < _questions.length
               ? Quiz(
